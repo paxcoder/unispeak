@@ -1,7 +1,13 @@
-import ctypes
-nvda=ctypes.windll.LoadLibrary("./nvdaControllerClient64.dll")
-def speak(nvdaspeak):
-     nvda.nvdaController_speakText(nvdaspeak)
-def nvda_is_running():
-     running=nvda.nvdaController_testIfRunning()
-     return running
+import sys
+def speak(text):
+    if sys.platform=="darwin":
+        import mactalk
+        speak=mactalk.speak
+    if sys.platform=="windows":
+     import nvda_speak
+     running=int(nvda_gspeak.nvda_is_running())
+     if running=="0":
+      speak=gspeak_nvda.speak
+     else:
+        import gsapi
+        speak=gsapi.speak
