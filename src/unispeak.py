@@ -4,10 +4,10 @@ def speak(text):
         import mactalk
         speak=mactalk.speak
     if sys.platform=="windows":
-     import nvda_speak
+     import nvda_unispeak
      running=int(nvda_gspeak.nvda_is_running())
      if running=="0":
-      speak=gspeak_nvda.speak
+      speak=unispeak_nvda.speak
      else:
-        import gsapi
-        speak=gsapi.speak
+        import unisapi
+        speak=unisapi.speak

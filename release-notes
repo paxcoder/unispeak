@@ -1,0 +1,5 @@
+Unispeak 2.0
+Fixed a bug with the modules not loading then crashing the system.
+*now it is called unispeak.
+added beta macOS support
+Dropped for 1.0 api(windows only)
