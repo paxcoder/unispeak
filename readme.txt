@@ -1,9 +1,6 @@
-This is a set of modules, allowing for text to speech, and screenreader support
-Import mactalk
-mactalk.speak("hello, world")
-The same with NVDA and sapi but NVDA can do following
-Import gspeak_nvda as nvda
-if nvda.running >0
-##use sapi
-Else
-##use NVDA.
+there is just one function, which works as follows
+speak("text")
+it is going to check on what platform it is running, a.k.a. darwin for macOS and windows, for windows.
+Then, if macOS will be detected, a thirt party module, called pyttsx3 will be required.
+it will then send that text to this module and speak it aloud.
+in windows's case, it first checks if NVDA is running, if yes, use that, if not, sapi will be used instead.
