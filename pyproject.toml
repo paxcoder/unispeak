@@ -1,6 +1,6 @@
 [project]
 name="unispeak"
-version="1.0.2"
+version="1.1"
 description="adds speech capabilities, nvda, NSS, sapi."
 [dependencies]
 pyttsx=2.90
