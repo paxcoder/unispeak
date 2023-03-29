@@ -1,6 +1,28 @@
-[project]
-name="unispeak"
-version="1.1"
-description="adds speech capabilities, nvda, NSS, sapi."
-[dependencies]
-pyttsx=2.90
+[tool.poetry]
+name = "unispeak"
+version = "1.1.1"
+description = "tts wrapper for audiogames."
+license = "MIT"
+
+readme = "README.md"
+
+packages = [
+    { include = "unispeak", from = "src" }
+]
+include = [
+    { path = "tests", format = "sdist" }
+]
+
+homepage = "https://paxcoder.github.io"
+repository = "https://github.com/paxcoder/unispeak"
+
+keywords = ["audiogames", "tts"]
+
+classifiers = [
+    "Topic :: Software Development :: tts",
+    "
+[tool.poetry.build]
+generate-setup-file = false
+
+#tool.poetry.dependencies]
+python = "^3.9"
