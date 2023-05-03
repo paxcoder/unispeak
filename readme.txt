@@ -1,3 +1,5 @@
+please use codeberg version, github is deprecated.
+https://codeberg.org/paxcoder/unispeak
 there is just one function, which works as follows
 speak("text")
 it is going to check on what platform it is running, a.k.a. darwin for macOS and windows, for windows.
